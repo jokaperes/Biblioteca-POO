@@ -1,24 +1,16 @@
 package main.java.model;
 
-public class Funcionario {
-    private String nome;
-    private String cpf;
+public class Funcionario  extends Pessoa  {
+
     private String email;
+    private String telefone;
 
-    public String getId() {
-        return cpf;
+    public String getTelefone() {
+        return telefone;
     }
 
-    public void setId(int id) {
-        this.cpf = cpf;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setTelefone(String telefone) {
+        this.telefone = telefone;
     }
 
     public String getEmail() {
@@ -30,3 +22,5 @@ public class Funcionario {
     }
 
 }
+
+
