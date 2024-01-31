@@ -9,32 +9,29 @@ public class Usuario {
 
 
 
-    public Usuario(String cpf, String nome, String endereco, String email, String telefone, String categoria) {
-        this.cpf = cpf;
-        this.nome = nome;
+   public class Usuario extends Funcionario{
+
+
+    private String endereco;
+
+    private String telefone;
+
+
+
+    public Usuario( String endereco,String telefone, String categoria) {
+
         this.endereco = endereco;
-        this.email = email;
+
         this.telefone = telefone;
 
     }
 
+    public Usuario() {
 
-
-    public String getId() {
-        return cpf;
     }
 
-    public void setId(int id) {
-        this.cpf = cpf;
-    }
 
-    public String getNome() {
-        return nome;
-    }
 
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
 
     public String getEndereco() {
         return endereco;
@@ -44,13 +41,7 @@ public class Usuario {
         this.endereco = endereco;
     }
 
-    public String getEmail() {
-        return email;
-    }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
 
     public String getTelefone() {
         return telefone;
@@ -64,10 +55,7 @@ public class Usuario {
     @Override
     public String toString() {
         return "Membro{" +
-                "cpf=" + cpf +
-                ", nome='" + nome + '\'' +
                 ", endereco='" + endereco + '\'' +
-                ", email='" + email + '\'' +
                 ", telefone='" + telefone + '\'' +
                 '}';
     }
