@@ -9,7 +9,7 @@ public class Livro {
         private String editora;
         private int quantidadeEstoque;
 
-        public Livro(String idLivro, String titulo, String autor, String categoria, int anoPublicacao, int quantidadeEstoque) {
+        public Livro(String idLivro, String titulo, String autor) {
             this.idLivro = idLivro;
             this.titulo = titulo;
             this.autor = autor;
@@ -18,11 +18,27 @@ public class Livro {
             this.quantidadeEstoque = quantidadeEstoque;
         }
 
-        public boolean estaDisponivel() {
-            return quantidadeEstoque > 0;
+        public String getIdLivro() {
+            return idLivro;
+        }
+        public String getTitulo() {
+            return titulo;
+        }
+        public String getAutor() {
+            return autor;
+        }
+
+        public String getCategoria() {
+            return categoria;
         }
 
 
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
+    public boolean estaDisponivel() {
+        return quantidadeEstoque > 0;
+    }
+}
 
 
